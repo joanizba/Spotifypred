@@ -23,3 +23,9 @@ Todos los servicios están conectados en la red interna `my_network`.
 ```bash
 git clone https://github.com/tu-usuario/tu-repo.git
 cd tu-repo
+
+🌐 Interfaces Web
+Servicio	URL
+Hadoop	http://localhost:9870
+NiFi	http://localhost:8080/nifi
+
