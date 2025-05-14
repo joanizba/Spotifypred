@@ -1,6 +1,4 @@
-Okay, here is a README based on the provided Jupyter Notebook (`memroia_v2.ipynb`).
 
-````markdown
 # 🎵 Spotify Popular Music Trends Analysis (2000–2022)
 
 ## 📌 Introducción
