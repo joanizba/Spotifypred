@@ -74,6 +74,7 @@ pip install -r requirements.txt
 ## 📂 Datos
 
 Los datos utilizados en este análisis **están ubicados en el directorio `data/`** de este repositorio.
+
 dataset principal ```text playlist_2010to2022 ```origen de kaggle https://www.kaggle.com/code/ryanlingo/spotify-hits-quick-analysis/notebook?select=playlist_2010to2022.csv 
 
 -----
