@@ -1,15 +1,26 @@
-
-# 🎵 Spotify Popular Music Trends Analysis (2000–2022)
+---
+# 🎵 Análisis Completo de Tendencias y Letras en la Música Popular de Spotify (2000-2022)
 
 ## 📌 Introducción
+Este proyecto aborda un análisis exhaustivo de la evolución de la música popular desde el año 2000 hasta 2022, utilizando datos de Spotify y letras de canciones recopiladas.
 
-Este proyecto explora **tendencias en la música popular** desde el año 2000 hasta 2022. Utilizando datos extraídos de listas de reproducción de Spotify, buscamos comprender cómo han evolucionado las características musicales, la popularidad por géneros y los atributos de audio a lo largo de más de dos décadas.
+**Objetivos Principales:**
 
-### 🔍 Objetivos del análisis:
+* Explorar la **evolución de características musicales**, popularidad por géneros y atributos de audio.
+* Analizar a fondo el **contenido lírico** de las canciones, incluyendo lenguaje, tópicos, frecuencia de palabras y su relación con el contexto social.
+* Aplicar **técnicas de Machine Learning** (clustering K-Means, modelos predictivos, redes neuronales) para agrupar canciones, predecir popularidad y extraer insights.
+* Utilizar **tecnologías de Big Data** (Docker Compose con Hadoop, Cassandra, NiFi y BigQuery) para gestionar y analizar grandes volúmenes de datos eficientemente.
 
-- ¿Qué géneros han dominado distintas épocas?
-- ¿Han cambiado los atributos de audio (como *danceability* o *energy*) con el tiempo?
-- ¿Qué relación hay entre la popularidad de un artista y la de sus canciones?
+**Contenido del Proyecto:**
+
+* Análisis de datos y visualizaciones sobre tendencias de popularidad y audio.
+* Implementación de algoritmos de clustering y asignación de estado de ánimo.
+* Desarrollo y evaluación de modelos de regresión y clasificación para predicción.
+* Construcción de una red neuronal para predecir la popularidad de las pistas.
+* Código y scripts para la infraestructura de datos distribuida con Docker Compose.
+* Consultas y análisis avanzados en BigQuery.
+* Scripts para la obtención automatizada de letras de canciones (API y Web Scraping).
+* Análisis de NLP sobre letras: estudio lingüístico, modelado de tópicos (LDA), frecuencia, similitud y tendencias contextuales.
 
 ---
 
