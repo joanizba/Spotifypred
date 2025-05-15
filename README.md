@@ -15,14 +15,6 @@ Este proyecto explora **tendencias en la música popular** desde el año 2000 ha
 
 ## 🚀 Contenido del Repositorio
 
-Este repositorio contiene el análisis completo en un cuaderno de Jupyter.
-
-- `memroia_v2.ipynb`: Cuaderno principal con el código Python, visualizaciones y explicaciones del análisis.
-
----
-
-## 📂 Estructura del Repositorio
-
 El repositorio sigue una estructura básica para organizar el código, los datos y la documentación:
 
 ```text
