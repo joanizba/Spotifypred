@@ -23,7 +23,6 @@ Este proyecto aborda un análisis exhaustivo de la evolución de la música popu
 * Análisis de NLP sobre letras: estudio lingüístico, modelado de tópicos (LDA), frecuencia, similitud y tendencias contextuales.
 
 ---
-
 ## 🚀 Contenido del Repositorio
 
 El repositorio sigue una estructura básica para organizar el código, los datos y la documentación:
