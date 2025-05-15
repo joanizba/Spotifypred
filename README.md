@@ -36,7 +36,7 @@ spotify-popular-music-trends/ # (o el nombre de tu carpeta raíz)
 
 ---
 
-# Clonar un Proyecto de GitHub a tu PC
+# Clonar Repositorio de GitHub
 
 Sigue estos pasos rápidos para obtener una copia local de un repositorio de GitHub:
 
@@ -71,32 +71,17 @@ pip install -r requirements.txt
 ```
 -----
 
-## 🏃 Cómo ejecutar el análisis
-
-1.  Clona este repositorio o descarga los archivos.
-2.  Asegúrate de tener los requisitos instalados.
-3.  Abre el cuaderno `memroia_v2.ipynb` usando Jupyter Notebook, JupyterLab o Google Colab.
-4.  Ejecuta las celdas secuencialmente para reproducir el análisis.
-
------
-
 ## 📂 Datos
 
 Los datos utilizados en este análisis **están ubicados en el directorio `data/`** de este repositorio.
-
+dataset principal ```text playlist_2010to2022 ```origen de kaggle https://www.kaggle.com/code/ryanlingo/spotify-hits-quick-analysis/notebook?select=playlist_2010to2022.csv 
 
 -----
-
-## ✨ Resultados
-
-El cuaderno contiene visualizaciones y explicaciones detalladas de los hallazgos relacionados con los objetivos planteados, incluyendo la evolución de géneros, cambios en atributos de audio y la relación entre popularidad de artistas y canciones.
-pendiente a cambiar
------
-
 
 ## 📧 Contacto
 
-(Sección opcional: Información de contacto del autor o mantenedor).
+* [Joan Izquierdo Balaciart] - <joanizquierdo07@gmail.com>
+* [Raúl Rodríguez Villalonga] - <rrv.2846@gmail.com>
 
 ```
 
