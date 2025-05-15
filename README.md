@@ -2,6 +2,7 @@
 # 🎵 Análisis Completo de Tendencias y Letras en la Música Popular de Spotify (2000-2022)
 
 ## 📌 Introducción
+
 Este proyecto aborda un análisis exhaustivo de la evolución de la música popular desde el año 2000 hasta 2022, utilizando datos de Spotify y letras de canciones recopiladas.
 
 **Objetivos Principales:**
