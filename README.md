@@ -1,4 +1,3 @@
----
 # 🎵 Análisis Completo de Tendencias y Letras en la Música Popular de Spotify (2000-2022)
 
 ## 📌 Introducción
