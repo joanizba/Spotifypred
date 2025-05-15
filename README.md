@@ -40,7 +40,7 @@ spotify-popular-music-trends/ # (o el nombre de tu carpeta raíz)
 
 ## 🛠️ Requisitos
 
-Para ejecutar este cuaderno, necesitarás tener instalado Python y las siguientes librerías:
+Para ejecutar este cuaderno, necesitarás tener instalado Python y las siguientes librerías. Las dependencias exactas se listan en `requirements.txt`.
 
 - pandas
 - numpy
@@ -49,12 +49,11 @@ Para ejecutar este cuaderno, necesitarás tener instalado Python y las siguiente
 - scikit-learn (si se utiliza para algún tipo de modelo o procesamiento)
 - Cualquier otra librería específica que se use en el cuaderno (revisar las importaciones en el notebook).
 
-Puedes instalar las dependencias usando pip:
+Puedes instalar las dependencias usando pip con el archivo `requirements.txt`:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn # Agrega las que falten
-````
-
+pip install -r requirements.txt
+```
 -----
 
 ## 🏃 Cómo ejecutar el análisis
