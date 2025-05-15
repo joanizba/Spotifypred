@@ -36,7 +36,22 @@ spotify-popular-music-trends/ # (o el nombre de tu carpeta raíz)
 
 ---
 
+# Clonar un Proyecto de GitHub a tu PC
 
+Sigue estos pasos rápidos para obtener una copia local de un repositorio de GitHub:
+
+1.  **Abre tu terminal.**
+2.  **Navega** a la carpeta donde quieras guardar el proyecto:
+    ```bash
+    cd ruta/a/tu/carpeta
+    ```
+3.  En GitHub, ve al repositorio, haz clic en el botón "<> Code" y **copia la URL HTTPS**.
+4.  En la terminal, usa `git clone` seguido de la URL copiada:
+    ```bash
+    git clone [URL_del_repositorio]
+    ```
+
+¡Listo! El proyecto se descargará en una nueva carpeta en tu ubicación actual.
 
 ## 🛠️ Requisitos
 
