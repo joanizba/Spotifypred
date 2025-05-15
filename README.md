@@ -67,27 +67,17 @@ pip install -r requirements.txt
 
 ## 📂 Datos
 
-El análisis se basa en datos de listas de reproducción de Spotify. (Nota: Si los datos no están incluidos en el repositorio, se debería añadir una sección explicando cómo obtenerlos o si se generan durante la ejecución).
+Los datos utilizados en este análisis **están ubicados en el directorio `data/`** de este repositorio.
+
 
 -----
 
 ## ✨ Resultados
 
 El cuaderno contiene visualizaciones y explicaciones detalladas de los hallazgos relacionados con los objetivos planteados, incluyendo la evolución de géneros, cambios en atributos de audio y la relación entre popularidad de artistas y canciones.
-
+pendiente a cambiar
 -----
 
-## 🤝 Contribuciones
-
-(Sección opcional: Si deseas permitir contribuciones, añade información aquí).
-
------
-
-## 📄 Licencia
-
-(Sección opcional: Indica la licencia bajo la cual se distribuye el proyecto).
-
------
 
 ## 📧 Contacto
 
