@@ -26,6 +26,7 @@ Este repositorio contiene el análisis completo en un cuaderno de Jupyter.
 El repositorio sigue una estructura básica para organizar el código, los datos y la documentación:
 
 spotify-popular-music-trends/ # (o el nombre de tu carpeta raíz)
+
 ├── data/              # &lt;-- Directorio para los datos utilizados (ver sección "Datos")
 ├── src/               # &lt;-- Directorio para el código fuente y notebooks
 │   └── memroia_v2.ipynb # &lt;-- El cuaderno principal con el análisis
