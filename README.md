@@ -21,6 +21,29 @@ Este repositorio contiene el análisis completo en un cuaderno de Jupyter.
 
 ---
 
+## 📂 Estructura del Repositorio
+
+El repositorio sigue una estructura básica para organizar el código, los datos y la documentación:
+
+spotify-popular-music-trends/ # (o el nombre de tu carpeta raíz)
+├── data/              # &lt;-- Directorio para los datos utilizados (ver sección "Datos")
+├── src/               # &lt;-- Directorio para el código fuente y notebooks
+│   └── memroia_v2.ipynb # &lt;-- El cuaderno principal con el análisis
+├── .gitignore         # &lt;-- Archivo para especificar qué ignorar por Git (datos grandes, resultados, etc.)
+├── README.md          # &lt;-- Este archivo con la descripción del proyecto
+└── requirements.txt   # &lt;-- Archivo con las dependencias necesarias
+
+
+* **`data/`**: Contiene los archivos de datos necesarios para el análisis. (Nota: Si los datos no están incluidos en GitHub debido a su tamaño o naturaleza, este directorio puede estar vacío o contener archivos pequeños de ejemplo, y la sección "Datos" explicará cómo obtenerlos).
+* **`src/`**: Directorio para el código fuente del proyecto. Aquí se encuentran los scripts de Python y los cuadernos de Jupyter, como `memroia_v2.ipynb`.
+* **`.gitignore`**: Define qué archivos y directorios deben ser ignorados por Git (como datos grandes, archivos de resultados generados, entornos virtuales, credenciales, etc.) para no ser incluidos en el repositorio.
+* **`README.md`**: El archivo que estás leyendo, proporcionando una visión general del proyecto, su configuración y cómo ejecutarlo.
+* **`requirements.txt`**: Lista de las librerías de Python necesarias y sus versiones para replicar el entorno de ejecución.
+
+---
+
+
+
 ## 🛠️ Requisitos
 
 Para ejecutar este cuaderno, necesitarás tener instalado Python y las siguientes librerías:
