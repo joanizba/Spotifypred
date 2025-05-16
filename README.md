@@ -89,88 +89,55 @@ dataset principal ```text playlist_2010to2022 ```origen de kaggle https://www.ka
 
 -----
 
-🧩 2. Nuevo Entorno Docker (Con Devbox)
-Se adopta un nuevo archivo docker-compose.yml que incluye una imagen de Hadoop más reciente y un contenedor devbox basado en ubuntu:latest para las herramientas.
+ "## 🧩 2. Nuevo Entorno Docker (Con Devbox)\n",
+        "Se adopta un nuevo archivo docker-compose.yml que incluye una imagen de Hadoop más reciente y un contenedor devbox basado en ubuntu:latest para las herramientas.\n",
+        "\n",
+        "*📝 Archivo docker-compose.yml*\n",
+        "```text\n",
+        "version: '3.9'\n",
+        "\n",
+        "services:\n",
+        "  hadoop:\n",
+        "    image: ghcr.io/apache/hadoop:3.3.6 # Nueva imagen de Hadoop\n",
+        "    container_name: hadoop\n",
+        "    ports:\n",
+        "      - \"9870:9870\" # WebHDFS\n",
+        "      - \"9000:9000\" # Default HDFS port\n",
+        "    networks:\n",
+        "      - my_network\n",
+        "\n",
+        "  cassandra:\n",
+        "    image: cassandra:latest\n",
+        "    container_name: cassandra\n",
+        "    ports:\n",
+        "      - \"9042:9042\" # CQL port\n",
+        "    networks:\n",
+        "      - my_network\n",
+        "\n",
+        "  nifi:\n",
+        "    image: apache/nifi:latest\n",
+        "    container_name: nifi\n",
+        "    ports:\n",
+        "      - \"8080:8080\" # NiFi UI\n",
+        "    environment:\n",
+        "      - NIFI_WEB_HTTP_PORT=8080\n",
+        "    networks:\n",
+        "      - my_network\n",
+        "\n",
+        "  devbox: # Nuevo contenedor dedicado para herramientas\n",
+        "    image: ubuntu:latest # Una imagen base limpia y moderna\n",
+        "    container_name: devbox\n",
+        "    networks:\n",
+        "      - my_network\n",
+        "    stdin_open: true # Permite interactividad\n",
+        "    tty: true      # Asigna una TTY para una terminal interactiva\n",
+        "\n",
+        "networks:\n",
+        "  my_network:\n",
+        "    driver: bridge\n",
+        "````\n",
 
-📝 Archivo docker-compose.yml
-
-version: '3.9'
-
-services:
-  hadoop:
-    image: ghcr.io/apache/hadoop:3.3.6 # Nueva imagen de Hadoop
-    container_name: hadoop
-    ports:
-      - "9870:9870" # WebHDFS
-      - "9000:9000" # Default HDFS port
-    networks:
-      - my_network
-
-  cassandra:
-    image: cassandra:latest
-    container_name: cassandra
-    ports:
-      - "9042:9042" # CQL port
-    networks:
-      - my_network
-
-  nifi:
-    image: apache/nifi:latest
-    container_name: nifi
-    ports:
-      - "8080:8080" # NiFi UI
-    environment:
-      - NIFI_WEB_HTTP_PORT=8080
-    networks:
-      - my_network
-
-  devbox: # Nuevo contenedor dedicado para herramientas
-    image: ubuntu:latest # Una imagen base limpia y moderna
-    container_name: devbox
-    networks:
-      - my_network
-    stdin_open: true # Permite interactividad
-    tty: true      # Asigna una TTY para una terminal interactiva
-
-networks:
-  my_network:
-    driver: bridge
-
-🧩 3. Verificación del Nuevo Entorno
-Para ello tendremos que utlizar el siguiente comando;
-
-docker ps -a
-
-🧩 4. Acceder y Usar Herramientas Cliente en el Contenedor devbox
-El contenedor devbox, basado en ubuntu:latest, se usará para instalar y ejecutar herramientas cliente.
-
-4.1 Entrar en el contenedor devbox
-docker exec -it devbox bash
-
-4.2 Actualizar listas de paquetes e instalar netcat y pip para Python 3
-apt install -y python3-pip netcat
-
-(Nota:Con el comando dkpg-l | grep python3-pip y dkpg-l | grep python3-netcatpodremos ver si se ha instalado correctamente tanto la lista de paquetes pip *(dkpg-l | grep python3-pip), como el netcat (dkpg-l | grep python3-netcat))*
-
-4.3 Instalar un entorno virtual (venv).
-  apt install -y python3-venv
-4.4 Crear y Activar el Entorno Virtual
-Crear el entorno virtual llamado 'myvenv'
-
-  python3 -m venv myvenv
-Activar el entorno virtual
-
-  source myvenv/bin/activate
-4.5 Instalar cqlsh dentro del entorno virtual activo
-  pip install cqlsh
-(Nota: Si encontraras errores de compilación aquí, necesitarías instalar antes apt install -y build-essential python3-dev fuera del venv, luego reactivar el venv e intentar pip install cqlsh de nuevo. En ubuntu:latest, las dependencias comunes de compilación para cqlsh suelen estar cubiertas o no son necesarias en el venv.)
-
-
-4.6 Conectar a Cassandra desde el entorno virtual activo en devbox
-  cqlsh cassandra 9042
-(Nota: Si la conexión es exitosa, verás el prompt cqlsh>. El nombre del host cassandra es reconocido porque ambos contenedores están en la misma red de Docker (my_network).
-
-
+    
 
 ## 📧 Contacto
 
