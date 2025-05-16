@@ -88,57 +88,6 @@ Los datos utilizados en este análisis **están ubicados en el directorio `data/
 dataset principal ```text playlist_2010to2022 ```origen de kaggle https://www.kaggle.com/code/ryanlingo/spotify-hits-quick-analysis/notebook?select=playlist_2010to2022.csv 
 
 -----
-
- "## 🧩 2. Nuevo Entorno Docker (Con Devbox)\n",
-        "Se adopta un nuevo archivo docker-compose.yml que incluye una imagen de Hadoop más reciente y un contenedor devbox basado en ubuntu:latest para las herramientas.\n",
-        "\n",
-        "*📝 Archivo docker-compose.yml*\n",
-        "```text\n",
-        "version: '3.9'\n",
-        "\n",
-        "services:\n",
-        "  hadoop:\n",
-        "    image: ghcr.io/apache/hadoop:3.3.6 # Nueva imagen de Hadoop\n",
-        "    container_name: hadoop\n",
-        "    ports:\n",
-        "      - \"9870:9870\" # WebHDFS\n",
-        "      - \"9000:9000\" # Default HDFS port\n",
-        "    networks:\n",
-        "      - my_network\n",
-        "\n",
-        "  cassandra:\n",
-        "    image: cassandra:latest\n",
-        "    container_name: cassandra\n",
-        "    ports:\n",
-        "      - \"9042:9042\" # CQL port\n",
-        "    networks:\n",
-        "      - my_network\n",
-        "\n",
-        "  nifi:\n",
-        "    image: apache/nifi:latest\n",
-        "    container_name: nifi\n",
-        "    ports:\n",
-        "      - \"8080:8080\" # NiFi UI\n",
-        "    environment:\n",
-        "      - NIFI_WEB_HTTP_PORT=8080\n",
-        "    networks:\n",
-        "      - my_network\n",
-        "\n",
-        "  devbox: # Nuevo contenedor dedicado para herramientas\n",
-        "    image: ubuntu:latest # Una imagen base limpia y moderna\n",
-        "    container_name: devbox\n",
-        "    networks:\n",
-        "      - my_network\n",
-        "    stdin_open: true # Permite interactividad\n",
-        "    tty: true      # Asigna una TTY para una terminal interactiva\n",
-        "\n",
-        "networks:\n",
-        "  my_network:\n",
-        "    driver: bridge\n",
-        "````\n",
-
-    
-
 ## 📧 Contacto
 
 * [Joan Izquierdo Balaciart] - <joanizquierdo07@gmail.com>
