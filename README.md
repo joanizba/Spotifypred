@@ -89,9 +89,12 @@ dataset principal ```text playlist_2010to2022 ```origen de kaggle https://www.ka
 
 -----
 "## 🧩 2. Nuevo Entorno Docker (Con Devbox)\n",
+
         "Se adopta un nuevo archivo docker-compose.yml que incluye una imagen de Hadoop más reciente y un contenedor devbox basado en ubuntu:latest para las herramientas.\n",
         "\n",
+        
         "*📝 Archivo docker-compose.yml*\n",
+        
         "```text\n",
         "version: '3.9'\n",
         "\n",
