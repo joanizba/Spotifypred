@@ -88,7 +88,13 @@ Los datos utilizados en este análisis **están ubicados en el directorio `data/
 dataset principal ```text playlist_2010to2022 ```origen de kaggle https://www.kaggle.com/code/ryanlingo/spotify-hits-quick-analysis/notebook?select=playlist_2010to2022.csv 
 
 -----
-## 🧩 2. Nuevo Entorno Docker (Con Devbox)
+## 🐋Docker
+### 1. Requisitos Previos (Docker y Docker compose)
+
+- Docker: [Instalar Docker Engine](https://docs.docker.com/engine/install/)
+- Docker Compose: [Instalar Docker Compose](https://docs.docker.com/compose/install/)
+  
+### 🧩 2. Creación de Entorno Docker (Con Devbox)
 Se adopta un nuevo archivo docker-compose.yml que incluye una imagen de Hadoop más reciente y un contenedor devbox basado en ubuntu:latest para las herramientas.
 
 *📝 Archivo docker-compose.yml*
@@ -135,37 +141,37 @@ networks:
   my_network:
     driver: bridge
 ```
-## 🧩 3. Verificación del Nuevo Entorno
+### 🧩 3. Verificación del Nuevo Entorno
 Para ello tendremos que utlizar el siguiente comando;
 ```text
 docker ps -a
 ````
-## 🧩 4. Acceder y Usar Herramientas Cliente en el Contenedor devbox
+###  🧩 4. Acceder y Usar Herramientas Cliente en el Contenedor devbox
 El contenedor devbox, basado en ``ubuntu:latest``, se usará para instalar y ejecutar herramientas cliente.
 
-### 4.1  Entrar en el contenedor devbox   
+#### 4.1  Entrar en el contenedor devbox   
     docker exec -it devbox bash
 
-### 4.2 Actualizar listas de paquetes e instalar netcat y pip para Python 3
+#### 4.2 Actualizar listas de paquetes e instalar netcat y pip para Python 3
     apt install -y python3-pip netcat
 *(Nota:Con el comando ``dkpg-l | grep python3-pip`` y ``dkpg-l | grep python3-netcat``podremos ver si se ha instalado correctamente tanto la lista de paquetes pip *``(dkpg-l | grep python3-pip)``*, como el netcat *``(dkpg-l | grep python3-netcat)``*)*
 
-### 4.3 Instalar un entorno virtual (`venv`).
+#### 4.3 Instalar un entorno virtual (`venv`).
 *       apt install -y python3-venv
 
-### 4.4 Crear y Activar el Entorno Virtual
+#### 4.4 Crear y Activar el Entorno Virtual
 * Crear el entorno virtual llamado 'myvenv'
 
         python3 -m venv myvenv
 * Activar el entorno virtual
 
         source myvenv/bin/activate
-### 4.5 Instalar `cqlsh` dentro del entorno virtual activo
+#### 4.5 Instalar `cqlsh` dentro del entorno virtual activo
 *       pip install cqlsh
 
 *(Nota: Si encontraras errores de compilación aquí, necesitarías instalar antes `apt install -y build-essential python3-dev` fuera del `venv`, luego reactivar el `venv` e intentar `pip install cqlsh` de nuevo. En `ubuntu:latest`, las dependencias comunes de compilación para `cqlsh` suelen estar cubiertas o no son necesarias en el `venv`.)*
 
-### 4.6 Conectar a Cassandra desde el entorno virtual activo en devbox
+#### 4.6 Conectar a Cassandra desde el entorno virtual activo en devbox
 *       cqlsh cassandra 9042
 
 *(Nota: Si la conexión es exitosa, verás el prompt `cqlsh>`. El nombre del host `cassandra` es reconocido porque ambos contenedores están en la misma red de Docker (`my_network`).*
